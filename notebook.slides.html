@@ -106,8 +106,10 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
 .highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
 .highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
 .highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
@@ -339,9 +341,9 @@ Source: <a href=http://learntocodewith.me/programming/python/python-2-vs-python-
 <center>
 <h1>Installation</h1>
 </center><h3 id="Linux-&amp;-Mac">Linux &amp; Mac<a class="anchor-link" href="#Linux-&amp;-Mac">&#182;</a></h3><p><img src="./pics/linux.jpeg" align="left" width=13%><br style="clear:both"/>
-It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtualenv</a> and <a href="https://pip.pypa.io/">pip</a> to setup isolated environments and install more packages. <a href="http://conda.pydata.org/docs/">Conda</a> is an alternative.</p>
+<em>It is already installed!</em> Use <a href="http://virtualenv.readthedocs.org/">virtualenv</a> and <a href="https://pip.pypa.io/">pip</a> to setup isolated environments and install more packages. <a href="http://conda.pydata.org/docs/">Conda</a> is an alternative.</p>
 <h3 id="Windows">Windows<a class="anchor-link" href="#Windows">&#182;</a></h3><p><img src="./pics/anaconda.png" align="left" width=15%><br style="clear:both"/></p>
-<p><em>A bit trickier.</em> Best use the <a href="https://www.continuum.io/downloads">Anaconda distribution</a> from Continuum Analytics to install everything you need to get going.</p>
+<p><em>A bit trickier!</em> Best use the <a href="https://www.continuum.io/downloads">Anaconda distribution</a> from Continuum Analytics to install everything you need to get going.</p>
 
 </div>
 </div>
@@ -361,7 +363,7 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">23</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">23</span>
 <span class="mi">3</span><span class="o">*</span><span class="n">x</span>
 </pre></div>
 
@@ -391,9 +393,9 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Hello &quot;</span>
-<span class="n">y</span> <span class="o">=</span> <span class="s">&quot;World!&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Hello &quot;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;World!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -420,7 +422,7 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -437,9 +439,9 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">TypeError</span>                                 Traceback (most recent call last)
 <span class="ansigreen">&lt;ipython-input-4-17ee3e2a0896&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">----&gt; 1</span><span class="ansiyellow"> </span><span class="ansigreen">print</span><span class="ansiyellow">(</span>x <span class="ansiyellow">+</span> <span class="ansicyan">1</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">----&gt; 1</span><span class="ansiyellow"> </span>print<span class="ansiyellow">(</span>x <span class="ansiyellow">+</span> <span class="ansicyan">1</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
 
-<span class="ansired">TypeError</span>: cannot concatenate &apos;str&apos; and &apos;int&apos; objects</pre>
+<span class="ansired">TypeError</span>: Can&apos;t convert &apos;int&apos; object to str implicitly</pre>
 </div>
 </div>
 
@@ -461,15 +463,15 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Positive, even number!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Positive, even number!&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Positive, odd number!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Positive, odd number!&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Non-positive number!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non-positive number!&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -496,10 +498,10 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">bmi</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">bmi</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">weight</span> <span class="o">/</span> <span class="n">height</span><span class="o">**</span><span class="mi">2</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;The BMI is: {:.3}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bmi</span><span class="p">(</span><span class="mf">1.85</span><span class="p">,</span> <span class="mi">79</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The BMI is: {:.3}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bmi</span><span class="p">(</span><span class="mf">1.85</span><span class="p">,</span> <span class="mi">79</span><span class="p">)))</span>
 </pre></div>
 
 </div>
@@ -535,8 +537,8 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -563,7 +565,7 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -592,8 +594,8 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -614,6 +616,34 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">others</span> <span class="o">=</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">others</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 and [3, 5]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -626,11 +656,11 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -654,11 +684,11 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -682,11 +712,11 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">del</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="k">del</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -719,10 +749,10 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
 </pre></div>
 
 </div>
@@ -732,10 +762,10 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s">&#39;b&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -759,11 +789,11 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span><span class="p">[</span><span class="s">&#39;d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -776,7 +806,7 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&apos;a&apos;: 1, &apos;c&apos;: 3, &apos;b&apos;: 2, &apos;d&apos;: 4}
+<pre>{&apos;a&apos;: 1, &apos;d&apos;: 4, &apos;b&apos;: 2, &apos;c&apos;: 3}
 </pre>
 </div>
 </div>
@@ -784,6 +814,46 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div>
 </div>
 
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span><span class="p">[</span><span class="s1">&#39;dispatch&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">41</span>
+<span class="n">x</span><span class="p">[</span><span class="s1">&#39;dispatch&#39;</span><span class="p">](</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>42</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Powerful and easy to use data structures like lists and dictionaries allow <strong>declarative programming</strong>.</p>
+
+</div>
+</div>
 </div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -796,13 +866,13 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -826,11 +896,12 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="c1"># better</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -851,6 +922,16 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div>
 </div>
 
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Many more <em>high-level</em> concepts available to express an algorithm as <em>natural</em> as possible.</p>
+
+</div>
+</div>
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -881,10 +962,10 @@ It is already installed, use <a href="http://virtualenv.readthedocs.org/">virtua
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-Data-Science-Stack">Python Data Science Stack<a class="anchor-link" href="#Python-Data-Science-Stack">&#182;</a></h1><ul>
+<center><h1>Python Data Science Stack</h1></center><ul>
 <li><strong>NumPy</strong> to work efficiently with multi-dimensional arrays and matrices. Includes some high-level mathematical operations.</li>
 <li><strong>SciPy</strong> extends NumPy with additional modules (optimization, linear algebra, integration, interpolation, special functions, FFT, signal and image processing, ODE solvers etc.).</li>
-<li><strong>Pandas</strong> builds upon NumPy and provides high-performance, easy-to-use data structures and data analysis tools .</li>
+<li><strong>Pandas</strong> builds upon NumPy and provides high-performance, easy-to-use data structures and data analysis tools.</li>
 <li><strong>Scikit-Learn</strong> provides simple and efficient machine learning tools for data mining and data analysis.</li>
 <li><strong>matplotlib</strong> provides 2d plotting capabilities. Use additionally <strong>Seaborn</strong> for statistical plots.</li>
 <li><strong>IPython</strong> is a powerful interactive shell and a kernel for <em>Jupyter</em>.</li>
@@ -928,16 +1009,16 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&#39;./input/train.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./input/train.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -947,10 +1028,10 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -961,7 +1042,7 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -1075,14 +1156,14 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># We drop some hard to use columns and define &#39;Embarked&#39; and &#39;Sex&#39; as categories</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s">&#39;Name&#39;</span><span class="p">,</span> <span class="s">&#39;Ticket&#39;</span><span class="p">,</span> <span class="s">&#39;Cabin&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s">&#39;Port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;Port&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;category&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s">&#39;Sex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;Sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;category&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s">&#39;Class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;Class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;category&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="c1"># We drop some hard to use columns and define &#39;Port&#39;, &#39;Sex&#39; and &#39;Class&#39; as categories</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Ticket&#39;</span><span class="p">,</span> <span class="s1">&#39;Cabin&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Port&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -1094,7 +1175,7 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[21]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[23]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -1181,10 +1262,10 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
 </div>
@@ -1195,7 +1276,7 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -1219,10 +1300,10 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -1233,7 +1314,7 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[23]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -1326,10 +1407,10 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="p">[[</span><span class="s">&#39;Sex&#39;</span><span class="p">,</span> <span class="s">&#39;Port&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Port&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -1340,7 +1421,7 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[26]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -1386,13 +1467,13 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># Fill not available observations</span>
-<span class="n">age_mean</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">df</span><span class="p">[</span><span class="s">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">age_mean</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s">&#39;Port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;Port&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s">&#39;S&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="c1"># Fill not available observations</span>
+<span class="n">age_mean</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">age_mean</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Port&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1402,10 +1483,10 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="p">[[</span><span class="s">&#39;Sex&#39;</span><span class="p">,</span> <span class="s">&#39;Port&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Port&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -1416,7 +1497,7 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[26]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -1471,12 +1552,12 @@ Painting from <a href=https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Titanic>W
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
-<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Age&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1763,13 +1844,13 @@ SVIVBmZJkiSpCgOzJEmSVIWBWZIkSari/wPpcGghthj5LAAAAABJRU5ErkJggg==
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># Draw a nested barplot to show survival for class and sex</span>
-<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">factorplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&quot;Class&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">&quot;Alive&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s">&quot;Sex&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s">&quot;bar&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s">&quot;muted&quot;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">set_ylabels</span><span class="p">(</span><span class="s">&quot;survival probability&quot;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">set_xlabels</span><span class="p">(</span><span class="s">&quot;passenger class&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="c1"># Draw a nested barplot to show survival for class and sex</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">factorplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Class&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Alive&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;muted&quot;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">set_ylabels</span><span class="p">(</span><span class="s2">&quot;survival probability&quot;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">set_xlabels</span><span class="p">(</span><span class="s2">&quot;passenger class&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1780,11 +1861,11 @@ SVIVBmZJkiSpCgOzJEmSVIWBWZIkSari/wPpcGghthj5LAAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;seaborn.axisgrid.FacetGrid at 0x7f9041b60a90&gt;</pre>
+<pre>&lt;seaborn.axisgrid.FacetGrid at 0x7faacdb509b0&gt;</pre>
 </div>
 
 </div>
@@ -1794,172 +1875,172 @@ SVIVBmZJkiSpCgOzJEmSVIWBWZIkSari/wPpcGghthj5LAAAAABJRU5ErkJggg==
 
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,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
-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
+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
-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
-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
+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
 "
 >
 </div>
@@ -1981,21 +2062,34 @@ KpIhRpIkFel/ANqHDMpBhDcOAAAAAElFTkSuQmCC
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="k">import</span> <span class="n">train_test_split</span>
 
-<span class="c"># Define features and target variables</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="s">&#39;Alive&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
-<span class="c"># Convert categories to integer values</span>
-<span class="n">X</span><span class="p">[</span><span class="s">&#39;Sex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="s">&#39;Sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
-<span class="n">X</span><span class="p">[</span><span class="s">&#39;Port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="s">&#39;Port&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s">&#39;Alive&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="c1"># Define features and target variables</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Alive&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alive&#39;</span><span class="p">]</span>
+<span class="c1"># Convert categories to integer values</span>
+<span class="n">X</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
+<span class="n">X</span><span class="p">[</span><span class="s1">&#39;Port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="s1">&#39;Port&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
+<span class="c1"># Convert to NumPy arrays</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
 
-<span class="c"># Split the data into train and test sets</span>
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c1"># Split the data into train and test sets</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
@@ -2006,10 +2100,10 @@ KpIhRpIkFel/ANqHDMpBhDcOAAAAAElFTkSuQmCC
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># Create and train the model</span>
+<div class=" highlight hl-ipython3"><pre><span class="c1"># Create and train the model</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
@@ -2021,11 +2115,11 @@ KpIhRpIkFel/ANqHDMpBhDcOAAAAAElFTkSuQmCC
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">preds</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;Accuracy: {:.1%}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">preds</span> <span class="o">==</span> <span class="n">y_test</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">preds</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: {:.1%}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">preds</span> <span class="o">==</span> <span class="n">y_test</span><span class="p">)))</span>
 </pre></div>
 
 </div>
@@ -2066,7 +2160,7 @@ KpIhRpIkFel/ANqHDMpBhDcOAAAAAElFTkSuQmCC
 This presentation was inspired by:</p>
 <ul>
 <li><a href="http://nbviewer.jupyter.org/github/savarin/pyconuk-introtutorial/blob/master/notebooks/Section%201-1%20-%20Filling-in%20Missing%20Values.ipynb">Savarin's PyCon UK Tutorial</a></li>
-<li><a href="http://nbviewer.jupyter.org/github/twiecki/pydata_ninja/blob/master/PyData%20Ninja.ipynb">Thomas Wicki's Introduction to Data Analysis with Python</a></li>
+<li><a href="http://nbviewer.jupyter.org/github/twiecki/pydata_ninja/blob/master/PyData%20Ninja.ipynb">Thomas Wiecki's Introduction to Data Analysis with Python</a></li>
 <li><a href="https://www.kaggle.com/c/titanic/">Kaggle's Titantic: Machine Learning from Disaster</a></li>
 </ul>
 
